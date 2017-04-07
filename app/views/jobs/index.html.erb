@@ -11,6 +11,10 @@
       <%= link_to(job.title, job_path(job)) %>
     </td>
     <td>
+
+      <%= link_to(job.description, job_path(job))%>
+    </td>
+    <td>
       <%= link_to("edit", edit_job_path(job)) %>
       <%= link_to("destroy",job_path(job), :method => :delete,:data =>{ :confirm=> "are you sure?"})%>
     </td>

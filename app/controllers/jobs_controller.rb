@@ -30,7 +30,7 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
   def update
     @job = Job.find(params[:id])
 
-    if @job.save
+    if @job.update(job_params)
       redirect_to jobs_path
     else
       render :edit
@@ -47,6 +47,6 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
     private
 
     def job_params
-      params.require(:job).permit(:title, :description)
+      params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email)
     end
 end
