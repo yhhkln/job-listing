@@ -3,7 +3,6 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
 
   def index
     @jobs = Job.where(:is_hidden => false).order("created_at DESC")
-
   end
 
   def new
@@ -12,6 +11,11 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
 
   def show
     @job = Job.find(params[:id])
+
+    if @job.is_hidden
+      flash[:warning] = "This job already archieves"
+      redirect_to root_path
+    end
   end
 
   def edit
