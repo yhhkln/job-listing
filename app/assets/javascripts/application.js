@@ -16,3 +16,15 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require_tree .
+//顶部回到
+$(document).on('click', '#gotop', function () {
+  $('body').animate({'scrollTop': 0}, 500) //在500ms的时间内，慢慢地回到顶部
+})
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 560) {
+    $('#gotop').fadeIn() // 当页面向下滚动的距离大于500px时，慢慢地显示「回到顶部按钮」
+  } else {
+    $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
+  }
+})
