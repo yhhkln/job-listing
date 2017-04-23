@@ -1,15 +1,15 @@
-<h1> add a job </h1>
+<h1> 挂起ibug </h1>
 
 <%= simple_form_for [:admin,@job] do |f| %>
 
 <%= f.input :title %>
 <%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限" %>
+<%= f.input :wage_lower_bound, :label => "悬赏下限" %>
+<%= f.input :wage_upper_bound, :label => "悬赏上限" %>
 <%= f.input :contact_email %>
 
 <%= f.input :is_hidden %>
 
-<%= f.submit "Submit" %>
+<%= f.submit "大神也有不会的时候啊" %>
 
 <%end%>

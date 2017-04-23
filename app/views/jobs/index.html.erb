@@ -1,7 +1,7 @@
 
 
 <div class="pull-right">
-  <%= link_to("add a job", new_job_path, :class=>"btn btn-default") %>
+  <%= link_to("抛弃一个ibug", new_job_path, :class=>"btn btn-default") %>
 </div>
 
 <div class="dropdown clearfix pull-right">
@@ -11,10 +11,10 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
         <li>
-          <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+          <%= link_to("按照悬赏下限排序", jobs_path(:order => "by_lower_bound")) %>
         </li>
         <li>
-            <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+            <%= link_to("按照悬赏上限排序", jobs_path(:order => "by_upper_bound")) %>
 
         </li>
         <li>
@@ -28,9 +28,9 @@
     <thead>
         <tr>
             <td>
-                职缺</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
+                ibug</td>
+            <td>悬赏下限</td>
+            <td>悬赏上限</td>
             <td>刊登时间</td>
         </tr>
 

@@ -1,18 +1,21 @@
-<h2>Sign up</h2>
+<h2>我也要报名</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name, required: true %>
+
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
+    <%= f.input :name, required: true %>
 		<%= f.input :is_admin, :label => false, as: :radio_buttons, collection:  [['ibug小白把bug扔在这里', false], ['debug求大神把bug领走', true]], required: true %>
 
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "填好了" %>
   </div>
 <% end %>
 

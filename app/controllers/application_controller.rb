@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 before_action :configure_permitted_parameters, if: :devise_controller?
   def require_is_admin
     if !current_user.admin?
-      flash[:alert] = 'you are not admin'
+      flash[:alert] = '功利不够 还不能变身为大神'
       redirect_to root_path
     end
   end

@@ -88,6 +88,7 @@
 
     .slogan {
         color: #222;
+
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: center;
@@ -146,14 +147,16 @@ footer {
 }
 
 footer .footer-below {
+  margin-top:10px;
+
     padding: 15px 0;
     background-color: rgb(197, 47, 36);//背景色
 }
 
 //回到顶部
 #gotop {
-  width: 29px;
-  height: 39px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -161,4 +164,38 @@ footer .footer-below {
   display: none; /*默认先隐藏掉*/
   cursor: pointer;
   color: #ffffff;
+  border-radius: 50%;
+  padding: 5px 9px;
+
+
+
+}
+
+
+//sidebar背景色
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: rgb(197, 47, 36);//背景色
+}
+.nav-pills .nav-pills :hover,
+.nav-pills .nav-pills :focus {
+    color: rgb(25,187,49);//
+}
+
+
+//送mac
+.dibusongmac{}
+.dibusongmactext {
+  text-align: center;
+}
+.dibusongmacimage{
+text-align:center!important;
+    margin: 0 25% ; /*水平居中*/
+    max-width: 50%;
+    height: auto;
+}
+
+.xz
+{
+  font-size: 1%!important ;
 }
