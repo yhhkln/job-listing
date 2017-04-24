@@ -1,5 +1,7 @@
 class Job < ApplicationRecord
   has_many :resumes
+  has_many :comments
+
   scope :published, -> { where(is_hidden: false)}
   scope :recent, -> { order('created_at DESC') }
   def publish!

@@ -1,9 +1,13 @@
 <h1><%= @job.title%></h1>
-
-<p>
-  <%= simple_format(@job.description) %>
-</p>
-
+<p><%= simple_format(@job.description) %></p>
 <div class="text-center">
   <%= link_to("交出bug细节，以便领走", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+</div>
+<h3 class="comments_title">
+  <%= @job.comments.count %> Comments
+</h3>
+<hr>
+<div id="comments">
+<%= render @job.comments%>
+<%= render "comments/form"%>
 </div>

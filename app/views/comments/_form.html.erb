@@ -1,0 +1,7 @@
+<%= simple_form_for([@job, @job.comments.build]) do |f|%>
+
+  <div class="field">
+      <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <%= f.submit "有意见但是不确定", class: "btn btn-primary" %>
+<% end %>
