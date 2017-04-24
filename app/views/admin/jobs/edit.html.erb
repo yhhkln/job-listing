@@ -1,12 +1,12 @@
-<h1> 修改ibug </h1>
+<h1> 描述不清导致无法解决 </h1>
 <%= simple_form_for [:admin, @job ] do |f| %>
 
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :laber => "悬赏下限" %>
-<%= f.input :wage_upper_bound, :laber => "悬赏上限" %>
-<%= f.input :contact_email %>
+<%= f.input :title , :label => "问题名称"%>
+<%= f.input :description , :label => "*具体点 不要钱"%>
+<%= f.input :wage_lower_bound , :label => "悬赏下限 钱是第一生产力"%>
+<%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
+<%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
 <%= f.input :is_hidden%>
 
-  <%= f.submit "大神也有打脸的时候啊" %>
+  <%= f.submit "估计你还得回来" %>
   <% end %>
