@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/alert
-//= require bootstrap/dropdown
 //= require_tree .
+//= require bootstrap
 //顶部回到
 $(document).on('click', '#gotop', function () {
   $('body').animate({'scrollTop': 0}, 500) //在500ms的时间内，慢慢地回到顶部
@@ -27,4 +26,10 @@ $(document).on('click', '#gotop', function () {
    } else {
      $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
    }
+ })
+ // 轮播图 game
+ $(document).ready(function () {
+   $('#myCarousel').carousel({
+     interval: 30000 //目前是30秒播放一张，可以根据需要调整这个值
+   })
  })

@@ -25,18 +25,18 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
+// a {
+//   color: #000;
+//
+//   &:visited {
+//     color: #666;
+//   }
+//
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
 
 th {
   padding-bottom: 5px;
@@ -91,4 +91,10 @@ div {
 
 label {
   display: block;
+}
+
+
+// 留言删除按钮无边框
+.wubiankuang{
+      border-color: #ffffff!important;
 }

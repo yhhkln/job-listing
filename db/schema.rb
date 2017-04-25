@@ -33,16 +33,6 @@ ActiveRecord::Schema.define(version: 20170424114720) do
     t.boolean  "is_hidden",        default: true
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.integer  "job_id"
-    t.text     "body"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["job_id"], name: "index_posts_on_job_id"
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
   create_table "resumes", force: :cascade do |t|
     t.integer  "job_id"
     t.integer  "user_id"

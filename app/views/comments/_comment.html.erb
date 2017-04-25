@@ -6,7 +6,7 @@
           <p class="lead"><%= comment.body %></p>
           <p><small>Submitted <strong><%= time_ago_in_words(comment.created_at) %> ago</strong> by <%= comment.user.name %></small></p>
         </div>
-        <div class="btn btn-group btn-default pull-right">
+        <div class="btn btn-group wubiankuang btn-default pull-right">
           <% if comment.user == current_user -%>
             <%= link_to '没领走想重来', job_comment_path(@job, comment), class: "btn btn-primary",method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>

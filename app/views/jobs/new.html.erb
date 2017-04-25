@@ -1,16 +1,23 @@
+</br>
 <div class="container">
   <div class="row">
-    <div class="col-md-10">
-      <h1> 扔ibug </h1>
-      <%= simple_form_for @job do |f| %>
-      <%= f.input :title , :label => "bug名称"%>
-      <%= f.input :description , :label => "*具体点 不要钱"%>
-      <%= f.input :wage_lower_bound, :label => "悬赏下限 钱是第一推动力" %>
-      <%= f.input :wage_upper_bound, :label => "悬赏上限 你就不能多给点么" %>
-      <%= f.input :contact_email, :label => "留下邮箱，方便告知bug已找到" %>
-      <%= f.input :is_hidden, :label => "只有自己可见？" %>
-      <%= f.submit "确认扔完了 还有没" %>
-      <% end %>
+    <div class="col-md-6 col-centered">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">扔bug </h3>
+          <div class="panel-body">
+            <%= simple_form_for @job do |f| %>
+            <%= f.input :title , :label => "bug名称"%>
+            <%= f.input :description, :label => "*具体点 这真不要钱" %>
+            <%= f.input :wage_lower_bound, :label => "悬赏下限 金钱是第一推动力" %>
+            <%= f.input :wage_upper_bound, :label => "悬赏上限 你就不能多给点么" %>
+            <%= f.input :contact_email, :label => "留下邮箱，方便告知bug已被领走" %>
+
+            <%= f.submit "确认把bug扔出去？" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
