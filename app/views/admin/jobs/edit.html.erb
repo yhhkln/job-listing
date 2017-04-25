@@ -1,12 +1,21 @@
-<h1> 描述不清导致无法解决 </h1>
-<%= simple_form_for [:admin, @job ] do |f| %>
-
-<%= f.input :title , :label => "问题名称"%>
-<%= f.input :description , :label => "*具体点 不要钱"%>
-<%= f.input :wage_lower_bound , :label => "悬赏下限 钱是第一生产力"%>
-<%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
-<%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
-<%= f.input :is_hidden%>
-
-  <%= f.submit "估计你还得回来" %>
-  <% end %>
+</br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-centered">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><h1> 描述不清导致无法解决 </h1>
+            <%= simple_form_for [:admin, @job ] do |f| %>
+            <%= f.input :title , :label => "问题名称"%>
+            <%= f.input :description , :label => "*具体点 不要钱"%>
+            <%= f.input :wage_lower_bound , :label => "悬赏下限 钱是第一生产力"%>
+            <%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
+            <%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
+            <%= f.input :is_hidden%>
+            <%= f.submit "估计你还得回来" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -8,11 +8,11 @@
         </div>
         <div class="panel-body">
           <%= simple_form_for @job do |f| %>
-          <%= f.input :title %>
-          <%= f.input :description %>
-          <%= f.input :wage_lower_bound, :label => "悬赏下限"%>
-          <%= f.input :wage_upper_bound, :label => "悬赏上限"%>
-          <%= f.input :contact_email %>
+          <%= f.input :title, :label => "字要多才能吸引人" %>
+          <%= f.input :description , :label => "细节 细节 细节 重要的事说三遍" %>
+          <%= f.input :wage_lower_bound, :label => "最少给我这些"%>
+          <%= f.input :wage_upper_bound, :label => "最多给我这些 全看心情"%>
+          <%= f.input :contact_email, :label => "email" %>
           <%= f.submit "瞎改完了还想点保存" %>
           <% end %>
         </div>

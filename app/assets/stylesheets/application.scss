@@ -261,3 +261,25 @@ text-align:center!important;
   margin-bottom:  15px;
   margin-right: 5px;
 }
+
+// 搜索栏
+.navbar-left {
+    float: left!important;
+    width: 15%;
+    margin: 15px 20px ;
+
+}
+input-group {
+    position: relative;
+    display: table;
+
+    border-collapse: separate;
+    width: 11%;
+}
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}

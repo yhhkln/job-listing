@@ -1,15 +1,22 @@
-<h1> 挂起ibug </h1>
-
-<%= simple_form_for [:admin,@job] do |f| %>
-
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "悬赏下限" %>
-<%= f.input :wage_upper_bound, :label => "悬赏上限" %>
-<%= f.input :contact_email %>
-
-<%= f.input :is_hidden %>
-
-<%= f.submit "大神也有不会的时候啊" %>
-
-<%end%>
+</br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-centered">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> 挂起ibug </h3>
+            <%= simple_form_for [:admin,@job] do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :wage_lower_bound, :label => "悬赏下限" %>
+            <%= f.input :wage_upper_bound, :label => "悬赏上限" %>
+            <%= f.input :contact_email %>
+            <%= f.input :is_hidden %>
+            <%= f.submit "点我确认" %>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
