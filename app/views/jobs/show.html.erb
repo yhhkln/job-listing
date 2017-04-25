@@ -22,7 +22,12 @@
 
         <%= render @job.comments%>
       </br>
-        <%= render "comments/form"%>
+        <%= simple_form_for([@job, @job.comments.build]) do |f|%>
+          <div class="field">
+            <%= f.text_area :body, class: "form-control" %>
+          </div>
+          <%= f.submit "submit", class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>
