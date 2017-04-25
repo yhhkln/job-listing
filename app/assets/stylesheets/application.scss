@@ -161,14 +161,12 @@ footer .footer-below {
   right: 20px;
   bottom: 20px;
   background-color: rgb(25,187,49);//
-  display: none; /*默认先隐藏掉*/
-  cursor: pointer;
   color: #ffffff;
   border-radius: 50%;
   padding: 5px 9px;
+  cursor: pointer;
 
-
-
+  display: none; /*默认先隐藏掉*/
 }
 
 
