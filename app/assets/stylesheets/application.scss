@@ -24,6 +24,7 @@
 .navbar-default {
     background-color: rgb(197, 47, 36);//背景色
     border-color: rgb(197, 47, 36);//边框
+    padding-bottom: 5px;
     margin-bottom: 0;
     border-radius: 0;
 }
@@ -75,15 +76,15 @@
     background-image: url("http://ww1.sinaimg.cn/large/006tNbRwgy1fex4qhya6dj31560q9qq7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 50px;
-
-    margin-bottom: 50px;
+    padding-top: -20px;
+    padding-bottom: 100px;
 
     .box-inner {
         background-color: rgba(250, 250, 250, 0.69);
+
         padding-bottom: 50px;
-        margin-top: 150px;
-        margin-bottom: 20px;
+        margin-top: 200px;
+        margin-bottom: 150px;
     }
 
     .title {
@@ -209,6 +210,7 @@ text-align:center!important;
   height: 375px;
   margin: 0 auto;
 }
+
 // col居中
 .col-centered{
   float:none;
@@ -263,18 +265,24 @@ text-align:center!important;
 }
 
 // 搜索栏
-.navbar-left {
-    float: left!important;
-    width: 15%;
-    margin: 15px 20px ;
-
-}
+// .navbar-left {
+//   margin: 20px auto;
+//   width: 50px;
+//   height: 10px;
+//
+// }
 input-group {
-    position: relative;
-    display: table;
-
-    border-collapse: separate;
-    width: 11%;
+  background: transparent;
+border: none;
+bottom: 0;
+box-sizing: border-box;
+left: 0;
+margin: 0;
+outline: none;
+padding: 0 8px;
+position: absolute;
+top: 2px;
+width: 100%;
 }
 .input-group .form-control {
     position: relative;
@@ -282,4 +290,9 @@ input-group {
     float: left;
     width: 100%;
     margin-bottom: 0;
+}
+
+// search show
+.searchcenter{
+  text-align:center
 }

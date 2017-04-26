@@ -1,36 +1,50 @@
-<div>
-  <br>
-<% if @query_string.blank? %>
-    <div class="search-info-title">
-      bug为空，导致视觉模糊！
-    </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-centered">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+          <% if @query_string.blank? %>
+            <div class="search-info-title">
+              <h3 class="searchcenter">bug为空，导致视觉模糊！</h3>
+          <% elsif @jobs.blank? %>
+            <br>
+            <h3 class="search-info-title searchcenter">
+              这个bug没有过，今天算是长见识了。要不要试着
+              <%= link_to '发bug', new_job_path, class: 'btn btn-danger' %>    
+            </h3>
 
-  <% elsif @jobs.blank? %>
-    <br>
-    <h2 class="search-info-title">这个bug没有过，今天算是长见识了。</h2>
-  <% else %>
-    <h2 class="search-info-title"> 有关"<%= @query_string %>"的信息 </h2>
-    <div class="search-result">
 
-      <div class="row jobs-show0"></div>
-      <div class="job-table">
-        <% @jobs.each do |job| %>
-        <div class="row jobs-show">
 
-          <div class="col-md-12 col-lg-9 col-lg-offset-1">
-
-            <div class="pull-right">
-              发布时间：<%= job.created_at.to_date %>
+            </h3>
+          <% else %>
+          <h2 class="search-info-title"> 有关"<%= @query_string %>"的信息 </h2>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="search-result">
+          <div class="row jobs-show0"></div>
+            <div class="job-table">
+            <% @jobs.each do |job| %>
+              <div class="row jobs-show">
+                <div class="col-md-12 col-lg-9 col-lg-offset-1">
+                  <div class="pull-right">
+                    发布时间：<%= job.created_at.to_date %>
+                  </div>
+                  <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
+                </div>
+              </div>
+              <% end %>
+              </div>
             </div>
-            <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
-
+            <div class="text-center">
+              <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
+            </div>
+          <% end %>
           </div>
         </div>
-        <% end %>
       </div>
     </div>
-    <div class="text-center">
-      <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
-    </div>
-  <% end %>
+  </div>
 </div>
