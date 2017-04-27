@@ -12,13 +12,11 @@
             <%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
             <%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
             <% if @job.image.present? %>
-   <span>目前商品图</span> <br>
+   <span>bug大图详情</span> <br>
    <%= image_tag(@job.image.thumb.url) %>
  <% end %>
+<%= f.input :image, as: :file %>
 
- <div class="group">
-   <%= f.input :image, as: :file %>
- </div>
 
             <%= f.input :is_hidden%>
             <%= f.submit "估计你还得回来" %>
