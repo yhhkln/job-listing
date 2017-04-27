@@ -4,10 +4,18 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><%= @job.title%></h3>
+          <h1 draggable=""class="panel-title"><%= @job.title%></h1>
         </div>
         <div class="panel-body">
           <p><%= simple_format(@job.description) %></p>
+          <div class="col-md-6 col-centered">
+          <% if @job.image.present? %>
+            <span>bug大图详情</span> <br>
+            <%= image_tag(@job.image.thumb.url) %>
+          <% end %>
+        </div>
+
+      </br>
           <div class="text-center">
             <%= link_to("交出bug细节，以便领走", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
           </div>
