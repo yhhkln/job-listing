@@ -11,6 +11,15 @@
             <%= f.input :wage_lower_bound , :label => "悬赏下限 钱是第一生产力"%>
             <%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
             <%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
+            <% if @job.image.present? %>
+   <span>目前商品图</span> <br>
+   <%= image_tag(@job.image.thumb.url) %>
+ <% end %>
+
+ <div class="group">
+   <%= f.input :image, as: :file %>
+ </div>
+
             <%= f.input :is_hidden%>
             <%= f.submit "估计你还得回来" %>
             <% end %>
