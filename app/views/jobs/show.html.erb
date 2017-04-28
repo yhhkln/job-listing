@@ -8,12 +8,27 @@
         </div>
         <div class="panel-body">
           <p><%= simple_format(@job.description) %></p>
-          <div class="col-md-6 col-centered">
-          <% if @job.image.present? %>
-            <span>bug大图详情</span> <br>
-            <%= image_tag(@job.image.thumb.url) %>
+
+
+
+          <div class=" col-centered">
+          <% if @photos.present? %>
+            <% @photos.each_with_index do |p, index| %>
+              <% if index == 0 %>
+                <%= image_tag p.avatar.medium.url %>
+                <div style="letter-spacing: -8px">
+              <% else %>
+                <%= image_tag p.avatar.thumb.url %>
+              <% end %>
+            <% end %>
+              </div>
+          <% else %>
+              <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
           <% end %>
         </div>
+
+
+
 
       </br>
           <div class="text-center">
@@ -29,7 +44,7 @@
       <div id="comments">
 
         <%= render @job.comments%>
-      </br>
+        </br>
         <%= simple_form_for([@job, @job.comments.build]) do |f|%>
           <div class="field">
             <%= f.text_area :body, class: "form-control" %>

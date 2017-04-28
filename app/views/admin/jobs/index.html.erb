@@ -1,31 +1,42 @@
 <table class="table table-boldered">
-    <thead>
+  <thead>
         <tr>
-            <td>
+            <th width="220">bug Pic</th>
+            <th>
                 bug
-            </td>
+            </th>
 
-            <td>
+            <th>
               思路数
-            </td>
-            <td>
+            </th>
+            <th>
                 悬赏下限
-            </td>
-            <td>
+            </th>
+            <th>
                 悬赏上限
-            </td>
-            <td>
+            </th>
+            <th>
                 管理选项
-            </td>
-            <td>
+            </th>
+            <th>
                 刊登时间
-            </td>
+            </th>
         </tr>
     </thead>
+  <tbody>
+
 
     <% @jobs.each do |job| %>
     <tr>
-
+        <td>
+          <%= link_to job_path(job) do %>
+             <% if job.photos.present? %>
+               <%= image_tag(job.photos[0].avatar.thumb.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            <% end %>
+        </td>
         <td>
             <%= render_job_status(job) %>
 
@@ -38,18 +49,17 @@
             <%= link_to("Edit", edit_admin_job_path(job)) %>
             |
             <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
-
             |
             <% if job.is_hidden %>
-
-            <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-default") %>
-        <% else %>
-            <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-default") %>
+              <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-default") %>
+            <% else %>
+              <%= link_to("Hide", hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-default") %>
             <% end %>
         </td>
         <td>
-            <%= job.created_at %>
+          <%= job.created_at %>
         </td>
     </tr>
     <% end %>
+  </tbody>
 </table>

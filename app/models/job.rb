@@ -2,6 +2,8 @@ class Job < ApplicationRecord
   has_many :resumes
   has_many :comments
   mount_uploader :image, ImageUploader
+  has_many :photos
+  accepts_nested_attributes_for :photos
 
   scope :published, -> { where(is_hidden: false)}
   scope :recent, -> { order('created_at DESC') }

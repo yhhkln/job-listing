@@ -17,6 +17,11 @@ class Admin::JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
+      if params[:photos] != nil
+        params[:photos]['avatar'].each do |a|
+          @photo = @job.photoss.create(:avatar => a)
+        end
+      end
       redirect_to admin_jobs_path
     else
       render :new
@@ -29,7 +34,14 @@ class Admin::JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    if @job.update(job_params)
+    if params[:photos] != nil
+      @job.photos.destroy_all #need to destroy old pics first
+      params[:photos]['avatar'].each do |a|
+        @picture = @job.photos.create(:avatar => a)
+      end
+      @job.update(job_params)
+      redirect_to admin_jobs_path
+    elsif @job.update(job_params)
       redirect_to admin_jobs_path
     else
       render :edit

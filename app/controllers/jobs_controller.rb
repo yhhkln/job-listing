@@ -16,11 +16,12 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
 
   def new
     @job = Job.new
+    @photo = @job.photos.build #for multi-pics
   end
 
   def show
     @job = Job.find(params[:id])
-
+    @photos = @job.photos.all
     if @job.is_hidden
       flash[:warning] = "This job already archieves"
       redirect_to root_path
@@ -35,6 +36,11 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
     @job = Job.new(job_params)
 
     if @job.save
+      if params[:photos] != nil
+         params[:photos]['avatar'].each do |a|
+           @photo = @job.photos.create(:avatar => a)
+         end
+       end
       redirect_to jobs_path
     else
       render :new
@@ -43,9 +49,15 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
 
   def update
     @job = Job.find(params[:id])
-
-    if @job.update(job_params)
-      redirect_to jobs_path
+    if params[:photos] != nil
+      @job.photos.destroy_all #need to destroy old pics first
+      params[:photos]['avatar'].each do |a|
+        @picture = @job.photos.create(:avatar => a)
+      end
+      @job.update(job_params)
+      redirect_to admin_jobs_path
+    elsif @job.update(job_params)
+      redirect_to admin_jobs_path
     else
       render :edit
     end

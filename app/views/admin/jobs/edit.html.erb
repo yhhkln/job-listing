@@ -11,11 +11,17 @@
             <%= f.input :wage_lower_bound , :label => "悬赏下限 钱是第一生产力"%>
             <%= f.input :wage_upper_bound , :label => "你就不能多写点么"%>
             <%= f.input :contact_email , :label => "留下email方便告知bug已被捡走"%>
-            <% if @job.image.present? %>
-   <span>bug大图详情</span> <br>
-   <%= image_tag(@job.image.thumb.url) %>
- <% end %>
-<%= f.input :image, as: :file %>
+
+
+<% if @job.photos.present? %>
+<span>bugtu</span> <br>
+<% @job.photos.each do |p| %>
+<%= image_tag p.avatar.thumb.url %><br>
+<% end %>
+<% end %>
+<%= f.label :avatar %><br>
+<%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
+
 
 
             <%= f.input :is_hidden%>
