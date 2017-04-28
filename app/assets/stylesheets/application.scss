@@ -31,10 +31,10 @@
 
 .navbar-default .navbar-brand {
     color: #ffffff;//左边ibug颜色
-
+font-size: 40px;
     line-height: 30px;
     font-size: 40px;
-
+    font-weight:900;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -48,6 +48,8 @@
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;//登录
     line-height: 30px;
+    font-size: 30px;
+    font-weight:900;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -69,6 +71,28 @@
     background-color: rgb(197, 47, 36);
     color: #212121;
 }
+// navbar悬浮
+.navbar-fixed-top {
+    top: 0px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+// footer悬浮
+html {
+   position: relative;
+   min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 100px;
+ }
 
 //---------Box---------
 
@@ -76,6 +100,7 @@
     background-image: url("http://ww1.sinaimg.cn/large/006tNbRwgy1fex4qhya6dj31560q9qq7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top:-26px;
     padding-top: -20px;
     padding-bottom: 100px;
 
@@ -91,6 +116,7 @@
         font-size: 100px;
         text-align: center;
         padding: 60px 0px;
+        color: #272C34;
     }
 
     .slogan {
@@ -144,40 +170,42 @@
 
 .section-heading {
     margin-bottom: 30px;
+    color:#272C34;
 }
 
 .lead {
     font-size: 18px;
     font-weight: 400;
+    color:#272C34;
 }
 
 
-footer {
-    color: white;
-}
+// footer {
+//     color: white;
+// }
+//
+// footer .footer-below {
+//   margin-top:10px;
+//
+//     padding: 15px 0;
+//     background-color: rgb(197, 47, 36);//背景色
+// }
 
-footer .footer-below {
-  margin-top:10px;
 
-    padding: 15px 0;
-    background-color: rgb(197, 47, 36);//背景色
-}
+.footer {
+   position: absolute;
+   bottom: 0;
+   width: 104%;
+   /* Set the fixed height of the footer here */
+   height: 60px;
+   background-color: rgb(197, 47, 36);//背景色
+   margin: 0 -15px;
 
-//回到顶部
-#gotop {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: rgb(25,187,49);//
-  color: #ffffff;
-  border-radius: 50%;
-  padding: 5px 9px;
-  cursor: pointer;
-
-  display: none; /*默认先隐藏掉*/
-}
+   p {
+      color: white;
+     margin-top: 10px;
+   }
+  }
 
 
 //sidebar背景色
@@ -194,6 +222,7 @@ footer .footer-below {
 //送mac
 .dibusongmac{}
 .dibusongmactext {
+  color:#272C34;
   margin-top: 150px;
   text-align: center;
 }
@@ -300,3 +329,198 @@ width: 100%;
 .searchcenter{
   text-align:center
 }
+
+
+// 调整滚
+element.style {
+    height: auto!important;
+    background-color: rgba(27, 188, 155,100%)!important;
+}
+
+
+
+// 滚
+
+
+ /**
+  * fullPage 2.4.6
+  * https://github.com/alvarotrigo/fullPage.js
+  * MIT licensed
+  *
+  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+  */
+ html, body {
+     margin: 0;
+     padding: 0;
+     overflow:hidden;
+
+     /*Avoid flicker on slides transitions for mobile phones #336 */
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ #superContainer {
+     height: 100%;
+     position: relative;
+
+     /* Touch detection for Windows 8 */
+     -ms-touch-action: none;
+
+     /* IE 11 on Windows Phone 8.1*/
+     touch-action: none;
+ }
+ .fp-section {
+     position: relative;
+     -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+     -moz-box-sizing: border-box; /* <=28 */
+     box-sizing: border-box;
+ }
+ .fp-slide {
+     float: left;
+ }
+ .fp-slide, .fp-slidesContainer {
+     height: 100%;
+     display: block;
+ }
+ .fp-slides {
+     z-index:1;
+     height: 100%;
+     overflow: hidden;
+     position: relative;
+     -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+     transition: all 0.3s ease-out;
+ }
+ .fp-section.fp-table, .fp-slide.fp-table {
+     display: table;
+     table-layout:fixed;
+     width: 100%;
+ }
+ .fp-tableCell {
+     display: table-cell;
+     vertical-align: middle;
+     width: 100%;
+     height: 100%;
+ }
+ .fp-slidesContainer {
+     float: left;
+     position: relative;
+ }
+ .fp-controlArrow {
+     position: absolute;
+     z-index: 4;
+     top: 50%;
+     cursor: pointer;
+     width: 0;
+     height: 0;
+     border-style: solid;
+     margin-top: -38px;
+ }
+ .fp-controlArrow.fp-prev {
+     left: 15px;
+     width: 0;
+     border-width: 38.5px 34px 38.5px 0;
+     border-color: transparent  #D52E28 transparent transparent;
+ }
+ .fp-controlArrow.fp-next {
+     right: 15px;
+     border-width: 38.5px 0 38.5px 34px;
+     border-color: transparent transparent transparent  #D52E28;
+ }
+ .fp-scrollable {
+     overflow: scroll;
+
+ }
+ .fp-notransition {
+     -webkit-transition: none !important;
+     transition: none !important;
+ }
+ #fp-nav {
+     position: fixed;
+     z-index: 100;
+     margin-top: -32px;
+     top: 50%;
+     opacity: 1;
+ }
+ #fp-nav.right {
+     right: 17px;
+ }
+ #fp-nav.left {
+     left: 17px;
+ }
+ .fp-slidesNav{
+     position: absolute;
+     z-index: 4;
+     left: 50%;
+     opacity: 1;
+ }
+ .fp-slidesNav.bottom {
+     bottom: 17px;
+ }
+ .fp-slidesNav.top {
+     top: 17px;
+ }
+ #fp-nav ul,
+ .fp-slidesNav ul {
+   margin: 0;
+   padding: 0;
+ }
+ #fp-nav ul li,
+ .fp-slidesNav ul li {
+     display: block;
+     width: 14px;
+     height: 13px;
+     margin: 7px;
+     position:relative;
+ }
+ .fp-slidesNav ul li {
+     display: inline-block;
+ }
+ #fp-nav ul li a,
+ .fp-slidesNav ul li a {
+     display: block;
+     position: relative;
+     z-index: 1;
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+     text-decoration: none;
+ }
+ #fp-nav ul li a.active span,
+ .fp-slidesNav ul li a.active span {
+     background: #333;
+ }
+ #fp-nav ul li a span,
+ .fp-slidesNav ul li a span {
+     top: 2px;
+     left: 2px;
+     width: 8px;
+     height: 8px;
+     border: 1px solid #000;
+     background: rgba(0, 0, 0, 0);
+     border-radius: 50%;
+     position: absolute;
+     z-index: 1;
+ }
+ #fp-nav ul li .fp-tooltip {
+     position: absolute;
+     top: -2px;
+     color: #fff;
+     font-size: 14px;
+     font-family: arial, helvetica, sans-serif;
+     white-space: nowrap;
+     max-width: 220px;
+     overflow: hidden;
+     display: block;
+     opacity: 0;
+     width: 0;
+ }
+ #fp-nav ul li:hover .fp-tooltip {
+     -webkit-transition: opacity 0.2s ease-in;
+     transition: opacity 0.2s ease-in;
+     width: auto;
+     opacity: 1;
+ }
+ #fp-nav ul li .fp-tooltip.right {
+     right: 20px;
+ }
+ #fp-nav ul li .fp-tooltip.left {
+     left: 20px;
+ }

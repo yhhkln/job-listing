@@ -1,82 +1,129 @@
-<div class="col-md-12 col-centered">
-  <div class="row box">
-    <div class="box-inner col-md-6 col-md-offset-3">
-      <h1 class="title">找bug</h1>
-      <!-- 搜索 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+<title>fullPage.js演示-响应式_dowebok</title>
+ <link rel="stylesheet" href="css/jquery.fullPage.css">
+ <style>
+.section { text-align: center; font: 30px "Microsoft Yahei"; color: #fff;}
+</style>
+</head>
 
-            <%= form_tag search_jobs_path , :method => :get do %>
-              <div class="input-group" id="search-id" >
-                <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="输入bug找bug">
-                <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-                </button>
-                </div>
+<body>
+<div id="dowebok">
+    <div class="section">
+				<!-- <h3>第一屏</h3>
+				<p>fullPage.js — 基本演示</p> -->
+				<div class="col-md-12 col-centered">
+				  <div class="row box">
+				    <div class="box-inner col-md-6 col-md-offset-3">
+				      <h1 class="title">找bug</h1>
+				      <!-- 搜索 -->
 
-            <% end %>
-          </div>
+				            <%= form_tag search_jobs_path , :method => :get do %>
+				              <div class="input-group" id="search-id" >
+				                <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="输入bug找bug">
+				                <div class="input-group-btn">
+				                  <button class="btn btn-default" type="submit">
+				                <i class="glyphicon glyphicon-search"></i>
+				                </button>
+				                </div>
 
-       </h3>
-        <p class="leadleft">
-          <%= link_to '发bug', new_job_path, class: 'btn btn-danger' %>
-        </p>
-      <p class="leadright">
-        <%= link_to '找bug', jobs_path, class: 'btn btn-success' %>
-      </p>
-    </div>
-  </div>
-</div>
+				            <% end %>
+				          </div>
 
-<div class="content-section-a">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">一个bug就是一个坑</h2>
-        <p class="lead">坑，留着我踩；你，踩着我，</br>把bug留在这里，继续前行。</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag "http://ww1.sinaimg.cn/large/006tNbRwgy1fex47x86raj30el07wwgs.jpg",
-        class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-</div>
+				       </h3>
+				        <p class="leadleft">
+				          <%= link_to '发bug', new_job_path, class: 'btn btn-danger' %>
+				        </p>
+				      <p class="leadright">
+				        <%= link_to '找bug', jobs_path, class: 'btn btn-success' %>
+				      </p>
+				    </div>
+				  </div>
+				</div>
+				<!-- <h3>第一屏</h3> -->
+			</div>
+			<div class="section">
+				<div class="slide">
+					<!-- <h3>第二屏的第一屏</h3> -->
+					<div class="content-section-a">
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-lg-5 col-sm-6">
+					        <hr class="section-heading-spacer">
+					        <div class="clearfix"></div>
+					        <h2 class="section-heading">一个bug就是一个坑</h2>
+					        <p class="lead">坑，留着我踩；你，踩着我，</br>把bug留在这里，继续前行。</p>
+					      </div>
+					      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					        <%= image_tag "http://ww1.sinaimg.cn/large/006tNbRwgy1fex47x86raj30el07wwgs.jpg",
+					        class: 'img-responsive' %>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- <h3>第二屏的第一屏</h3> -->
+				</div>
+				<div class="slide">
+					<!-- <h3>第二屏的第二屏</h3> -->
+					<div class="content-section-b">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+									<hr class="section-heading-spacer">
+									<div class="clearfix"></div>
+									<h2 class="section-heading">bug 一个无情的家伙</h2>
+									<p class="lead">当你找不到ta的时候，ta天天粘着你，</br>当你找到ta的时候，ta却马上消失。</p>
+								</div>
+								<div class="col-lg-5 col-sm-pull-6  col-sm-6">
+									<%= image_tag "http://ww3.sinaimg.cn/large/006tNbRwgy1fex47w6yh4j30el07wdh1.jpg",
+									class: 'img-responsive' %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <h3>第二屏的第二屏</h3> -->
+				</div>
+				<div class="slide">
+					<!-- <h3>第二屏的第三屏</h3> -->
+					<div class="content-section-a">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-5 col-sm-6">
+									<hr class="section-heading-spacer">
+									<div class="clearfix"></div>
+									<h2 class="section-heading">bug的宣言：</h2>
+									<p class="lead">“你走吧，我和 找bug 在一起了，如果不想再见到我，请给<a target="_blank" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投票。谢谢！"</p>
+								</div>
+								<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+									<%= image_tag "http://ww4.sinaimg.cn/large/006tNbRwgy1fex4d1sizqj30jg0ajaau.jpg",
+									class: 'img-responsive' %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <h3>第二屏的第三屏</h3> -->
+				</div>
+			</div>
+			<div class="section">
+				<!-- <h3>第三屏</h3> -->
 
-<div class="content-section-b">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">bug 一个无情的家伙</h2>
-        <p class="lead">当你找不到ta的时候，ta天天粘着你，</br>当你找到ta的时候，ta却马上消失。</p>
-      </div>
-      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-        <%= image_tag "http://ww3.sinaimg.cn/large/006tNbRwgy1fex47w6yh4j30el07wdh1.jpg",
-        class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-</div>
+				<!-- <h3>第三屏</h3> -->
 
-<div class="content-section-a">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">bug的宣言：</h2>
-        <p class="lead">“你走吧，我和 找bug 在一起了，如果不想再见到我，请给<a target="_blank" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投票。谢谢！"</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag "http://ww4.sinaimg.cn/large/006tNbRwgy1fex4d1sizqj30jg0ajaau.jpg",
-        class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="dibusongmac">
   <h4 class="dibusongmactext">找bug成功后
@@ -85,5 +132,41 @@
   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1fex941gc8aj30wu0us78x.jpg"
   class="dibusongmacimage">
 </div>
+
+
+
+
+
+
+
+        <p>如果可视区宽度小于1024，则关闭全屏滚动效果，使用自带的滚动条</p>
+    </div>
+    <div class="section">
+        <p>请试着调整浏览器大小并查看滚动条是否出现</p>
+    </div>
 </div>
-</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+    $('#dowebok').fullpage({
+        sectionsColor : ['#ffffff', '#ffffff', '#ffffff', '#aaffff']
+    });
+
+    $(window).resize(function(){
+        autoScrolling();
+    });
+
+    function autoScrolling(){
+        var $ww = $(window).width();
+        if($ww < 1024){
+            $.fn.fullpage.setAutoScrolling(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+    }
+
+    autoScrolling();
+});
+</script>
