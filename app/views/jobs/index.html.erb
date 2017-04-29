@@ -40,6 +40,9 @@
               <tr>
                 <th width="220">bug Pic</th>
                 <th>bug</th>
+                <th>课程名称</th>
+                <th>章节</th>
+                <th>步骤</th>
                 <th>悬赏下限</th>
                 <th>悬赏上限</th>
                 <th>刊登时间</th>
@@ -62,6 +65,9 @@
                       <% end %>
                   </td>
                   <td><%= link_to(job.title, job_path(job)) %></td>
+                  <td><%= job.kechengmingcheng %></td>
+                  <td><%= job.zhangjie %></td>
+                  <td><%= job.step %></td>
                   <td><%= job.wage_lower_bound %></td>
                   <td><%= job.wage_upper_bound %></td>
                   <td><%= job.created_at %></td>

@@ -10,6 +10,9 @@
           <%= simple_form_for @job do |f| %>
           <%= f.input :title, :label => "字要多才能吸引人" %>
           <%= f.input :description , :label => "细节 细节 细节 重要的事说三遍" %>
+          <%= f.input :kechengmingcheng, :label => "课程名称 " %>
+          <%= f.input :zhangjie, :label => "章节" %>
+          <%= f.input :step, :label => "步骤" %>
           <%= f.input :wage_lower_bound, :label => "最少给我这些"%>
           <%= f.input :wage_upper_bound, :label => "最多给我这些 全看心情"%>
           <%= f.input :contact_email, :label => "email" %>
@@ -22,7 +25,7 @@
           <% end %>
           <%= f.label :avatar %><br>
           <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
-          
+
           <%= f.input :is_hidden%>
 
           <%= f.submit "瞎改完了还想点保存" %>
