@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destroy]
+before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destroy, :upvote, :downvote ]
  before_action :validate_search_key, only: [:search]
 
   def index
@@ -68,6 +68,21 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
       @job.destroy
 
       redirect_to jobs_path
+    end
+    # 投票功能
+    def upvote
+      @job = Job.find(params[:id])
+      if !current_user.is_voter_of?(@job)
+        current_user.upvote!(@job)
+      end
+      redirect_to :back
+    end
+    def downvote
+      @job = Job.find(params[:id])
+      if current_user.is_voter_of?(@job)
+        current_user.downvote!(@job)
+      end
+      redirect_to :back
     end
 # 搜索功能
     def search

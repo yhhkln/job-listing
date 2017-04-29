@@ -9,8 +9,18 @@
         <div class="panel-body">
           <p><%= simple_format(@job.description) %></p>
 
+          <!-- 投票 -->
+          <span class="pull-left">
+            <%= @job.voters.count %>
+            <% if current_user && current_user.is_voter_of?(@job) %>
+              <%= link_to("", downvote_job_path(@job), method: :post, class: "fa fa-heart fa-2x", style: "color:red;") %>
+             <% else %>
+              <%= link_to("", upvote_job_path(@job), method: :post, class: "fa fa-heart-o fa-2x") %>
+            <% end %>
+          </span>
 
 
+          <!-- 多图 -->
           <div class=" col-centered">
           <% if @photos.present? %>
             <% @photos.each_with_index do |p, index| %>
@@ -29,7 +39,7 @@
 
 
 
-
+        <!-- resume简历 -->
       </br>
           <div class="text-center">
             <%= link_to("交出bug细节，以便领走", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>

@@ -2,7 +2,7 @@
 
 </br>
 <!-- 我是分割线 -->
-<div class="container">
+<div class="container .fp-scrollable">
   <div class="row">
     <div class="col-md-10 col-centered">
 <!--  发bug-->
@@ -43,6 +43,7 @@
                 <th>悬赏下限</th>
                 <th>悬赏上限</th>
                 <th>刊登时间</th>
+                <th>点赞<th>
                 <th>我想改</th>
                 <th>已被领走<th>
               </tr>
@@ -63,6 +64,14 @@
                   <td><%= job.wage_lower_bound %></td>
                   <td><%= job.wage_upper_bound %></td>
                   <td><%= job.created_at %></td>
+                  <td>
+                    <%= job.voters.count %>
+                    <% if current_user && current_user.is_voter_of?(job) %>
+                      <%= link_to("", downvote_job_path(job), method: :post, class: "fa fa-heart", style: "color:red;") %>
+                    <% else %>
+                      <%= link_to("", upvote_job_path(job), method: :post, class: "fa fa-heart-o") %>
+                    <% end %>
+                  </td>
                   <td><%= link_to("该改改", edit_job_path(job), class: "btn btn-sm btn-default")%></td>
                   <td><%= link_to("拜拜", job_path(job),    class: "btn btn-sm btn-default",
                                 method: :delete, data: { confirm: "Are you sure?" } )%>
