@@ -2,6 +2,9 @@ class Job < ApplicationRecord
   has_many :votes
   has_many :voters, through: :votes, source: :user
 
+  has_many :favorites
+  has_many :users, through: :favorites, source: :user
+
   has_many :resumes
 
   has_many :comments

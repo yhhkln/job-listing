@@ -22,11 +22,12 @@
  //---------Navbar---------
 
 .navbar-default {
-    background-color: rgb(197, 47, 36);//背景色
+    background-color: #D52E28;//背景色
     height:50px;
     padding-bottom: 5px;
     margin-bottom: 0;
     border-radius: 0;
+    border-color:#D52E28;
 }
 
 .navbar-default .navbar-brand {
@@ -234,27 +235,27 @@ text-align:center!important;
     height: auto;
 }
 
-// 轮播图 game
-.carousel {
-  width: 564px;
-  height:238px;
-  margin: 0 auto;
-}
-.carousel .item {
-  height: 375px;
-  margin: 0 auto;
-}
-
-// col居中
-.col-centered{
-  float:none;
-  margin:0 auto;
-}
-
-// 小游戏文字居中
-.game{
-  text-align:center
-}
+  // // 轮播图 game
+  // .carousel {
+  //   width: 564px;
+  //   height:238px;
+  //   margin: 0 auto;
+  // }
+  // .carousel .item {
+  //   height: 375px;
+  //   margin: 0 auto;
+  // }
+  //
+  // // col居中
+  // .col-centered{
+  //   float:none;
+  //   margin:0 auto;
+  // }
+  //
+  // // 小游戏文字居中
+  // .game{
+  //   text-align:center
+  // }
 
 // 按钮属性
 // 颜色
@@ -331,7 +332,19 @@ width: 100%;
   text-align:center
 }
 
-
+// 第四屏链接颜色
+.sicolor
+{
+  color: #D52E28  ;
+}
+a {
+    color: #D52E28;
+    text-decoration: none;
+}
+  a:hover, a:focus {
+      color: #FFEB3B;
+      text-decoration: underline;
+  }
 // 调整滚
 element.style {
     height: auto!important;

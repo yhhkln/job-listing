@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     member do()
       post :upvote
       post :downvote
+
+      post :add_to_favorite
+      post :quit_favorite
+
     end
     collection do
       get :search

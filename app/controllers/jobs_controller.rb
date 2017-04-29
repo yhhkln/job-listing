@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destroy, :upvote, :downvote ]
+before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destroy, :upvote, :downvote, :add_to_favorite, :quit_favorite ]
  before_action :validate_search_key, only: [:search]
 
   def index
@@ -11,6 +11,9 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
          else
            Job.published.recent
          end
+    if params[:favorite] == "yes"
+      @jobs = current_user.jobs
+    end
   end
 
 
@@ -83,6 +86,19 @@ before_action :authenticate_user!,  only: [:new, :create, :update, :edit, :destr
         current_user.downvote!(@job)
       end
       redirect_to :back
+    end
+    #收藏
+    def add_to_favorite
+      @job = Job.find(params[:id])
+      @job.users << current_user
+      @job.save
+      redirect_to :back, notice:"成功加入收藏!"
+    end
+    def quit_favorite
+      @job = Job.find(params[:id])
+      @job.users.delete(current_user)
+      @job.save
+      redirect_to :back, alert: "成功取消收藏!"
     end
 # 搜索功能
     def search

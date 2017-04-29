@@ -24,7 +24,7 @@
 
                 <li> <%= link_to("大神不是那么好当的 还是小白好", admin_jobs_path) %></li>
                 <li> <%= link_to("小白也有出头天 瞬间变大神", jobs_path) %></li>
-
+                <li><%= link_to(content_tag(:i, "我的收藏", class: "fa fa-heart fa-md"), jobs_path(:favorite => "yes"))%> </li>            
                 <% end %>
                 <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
               </ul>

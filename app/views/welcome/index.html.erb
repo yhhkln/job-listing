@@ -121,41 +121,39 @@
 			</div>
 			<div class="section">
 				<!-- <h3>第三屏</h3> -->
-
+        <div class="dibusongmac">
+          <h4 class="dibusongmactext">找bug成功后
+          </br>
+          赠送 Mac 庆祝你开始非凡新旅程</h4>
+          <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1fex941gc8aj30wu0us78x.jpg"
+          class="dibusongmacimage">
+        </div>
 				<!-- <h3>第三屏</h3> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="dibusongmac">
-  <h4 class="dibusongmactext">找bug成功后
-  </br>
-  赠送 Mac 庆祝你开始非凡新旅程</h4>
-  <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1fex941gc8aj30wu0us78x.jpg"
-  class="dibusongmacimage">
-</div>
-
-
-
-
-
-
-
-        <p>如果可视区宽度小于1024，则关闭全屏滚动效果，使用自带的滚动条</p>
     </div>
     <div class="section">
-        <p>请试着调整浏览器大小并查看滚动条是否出现</p>
+      <div class="slide">
+        <h1>这里是一些说明，请向右翻页--><h1></div>
+      <div class="slide">
+        <h1>这有一些功能，只有那些具有探索精神的人才能发现</h1>
+      </br>
+        <h2>如果你的屏幕宽度小于1024，全屏滚动的效果就会关闭，你不去试一下么?</h2>
+
+      </div>
+      <div class="slide">
+        <h1>
+          有没有注意到右侧的滚动条，会动的呦。<h1>
+        </br>
+          <h1>下一页应该有隐藏彩蛋。</h1></div>
+      <div class="slide">
+
+        <h1>据说我的网站，我想干什么，就干什么，我嘿嘿嘿。</h1></br>
+        <h1>你那么看我干啥，你怕啥，隔着个电脑我还能干啥，只能拉个票了 </h1></br>
+        <h1>都看到这了，已经用实际行动证明了你是真的喜欢我的网站，</h1></br>
+          <h1>请再实际一点，动动小手，帮我的<a target="_blank sicolor" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投个票。
+        </h1></br>
+        <h1>谢谢 乖巧</h1>
+        </div>
     </div>
 </div>
 
@@ -164,7 +162,7 @@
 <script>
 $(function(){
     $('#dowebok').fullpage({
-        sectionsColor : ['#ffffff', '#ffffff', '#ffffff', '#aaffff']
+        sectionsColor : ['#ffffff', '#ffffff', '#ffffff','#071BC7']
     });
 
     $(window).resize(function(){
@@ -173,13 +171,14 @@ $(function(){
 
     function autoScrolling(){
         var $ww = $(window).width();
-        if($ww < 1024){
-            $.fn.fullpage.setAutoScrolling(false);
+        if($ww > 1024){
+          $.fn.fullpage.setAutoScrolling(true);
         } else {
-            $.fn.fullpage.setAutoScrolling(true);
+          $.fn.fullpage.setAutoScrolling(false);
         }
     }
 
     autoScrolling();
 });
 </script>
+</body>

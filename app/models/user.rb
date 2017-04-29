@@ -4,6 +4,9 @@ class User < ApplicationRecord
 
   has_many :votes
   has_many :voted_jobs, :through => :votes, :source => :job
+  
+  has_many :favorites
+  has_many :jobs, through: :favorites, source: :job
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

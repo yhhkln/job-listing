@@ -4,7 +4,7 @@
 <!-- 我是分割线 -->
 <div class="container .fp-scrollable">
   <div class="row">
-    <div class="col-md-10 col-centered">
+    <div class="col-md-12 col-centered">
 <!--  发bug-->
       <div class="pull-right ">
         <%= link_to("丢bug", new_job_path, :class=>" diubug btn btn-default") %>
@@ -43,7 +43,8 @@
                 <th>悬赏下限</th>
                 <th>悬赏上限</th>
                 <th>刊登时间</th>
-                <th>点赞<th>
+                <th>点赞</th>
+                <th>收藏</th>
                 <th>我想改</th>
                 <th>已被领走<th>
               </tr>
@@ -70,6 +71,13 @@
                       <%= link_to("", downvote_job_path(job), method: :post, class: "fa fa-heart", style: "color:red;") %>
                     <% else %>
                       <%= link_to("", upvote_job_path(job), method: :post, class: "fa fa-heart-o") %>
+                    <% end %>
+                  </td>
+                  <td>
+                    <% if !job.users.include?(current_user) %>
+                      <%= link_to("",add_to_favorite_job_path(job),method: :post, class: "fa fa-heart") %>
+                    <% else %>
+                      <%= link_to("", quit_favorite_job_path(job),method: :post,  class: "fa fa-heart", style: "color:red;") %>
                     <% end %>
                   </td>
                   <td><%= link_to("该改改", edit_job_path(job), class: "btn btn-sm btn-default")%></td>
