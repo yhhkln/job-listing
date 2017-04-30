@@ -1,22 +1,5 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
- <meta charset="UTF-8">
-<title>fullPage.js演示-响应式_dowebok</title>
- <link rel="stylesheet" href="css/jquery.fullPage.css">
- <style>
-.section { text-align: center; font: 30px "Microsoft Yahei"; color: #fff;}
-</style>
-</head>
-
 <body>
-<div id="dowebok">
-    <div class="section">
-				<!-- <h3>第一屏</h3>
-				<p>fullPage.js — 基本演示</p> -->
-				<div class="col-md-12 col-centered">
+  			<div class="col-md-12 col-centered">
 				  <div class="row box">
 				    <div class="box-inner col-md-6 col-md-offset-3">
 				      <h1 class="title">找bug</h1>
@@ -44,11 +27,7 @@
 				    </div>
 				  </div>
 				</div>
-				<!-- <h3>第一屏</h3> -->
-			</div>
-			<div class="section">
-				<div class="slide">
-					<!-- <h3>第二屏的第一屏</h3> -->
+
 					<div class="content-section-a">
 					  <div class="container">
 					    <div class="row">
@@ -65,10 +44,7 @@
 					    </div>
 					  </div>
 					</div>
-					<!-- <h3>第二屏的第一屏</h3> -->
-				</div>
-				<div class="slide">
-					<!-- <h3>第二屏的第二屏</h3> -->
+
 					<div class="content-section-b">
 						<div class="container">
 							<div class="row">
@@ -85,10 +61,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <h3>第二屏的第二屏</h3> -->
-				</div>
-				<div class="slide">
-					<!-- <h3>第二屏的第三屏</h3> -->
+
 					<div class="content-section-a">
 						<div class="container">
 							<div class="row">
@@ -105,11 +78,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <h3>第二屏的第三屏</h3> -->
-				</div>
-			</div>
-			<div class="section">
-				<!-- <h3>第三屏</h3> -->
+
         <div class="dibusongmac">
           <h4 class="dibusongmactext">找bug成功后
           </br>
@@ -117,34 +86,117 @@
           <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1fex941gc8aj30wu0us78x.jpg"
           class="dibusongmacimage">
         </div>
-				<!-- <h3>第三屏</h3> -->
 
-    </div>
-    <div class="section">
-      <div class="slide">
-        <h1>这里是一些说明，请向右翻页--><h1></div>
-      <div class="slide">
-        <h1>这有一些功能，只有那些具有探索精神的人才能发现</h1>
-      </br>
-        <h2>如果你的屏幕宽度小于1024，全屏滚动的效果就会关闭，你不去试一下么?</h2>
 
-      </div>
-      <div class="slide">
-        <h1>
-          有没有注意到右侧的滚动条，会动的呦。<h1>
-        </br>
-          <h1>下一页应该有隐藏彩蛋。</h1></div>
-      <div class="slide">
+        <!-- Add this css File in head tag-->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
 
-        <h1>据说我的网站，我想干什么，就干什么，我嘿嘿嘿。</h1></br>
-        <h1>你那么看我干啥，你怕啥，隔着个电脑我还能干啥，只能拉个票了 </h1></br>
-        <h1>都看到这了，已经用实际行动证明了你是真的喜欢我的网站，</h1></br>
-          <h1>请再实际一点，动动小手，帮我的<a target="_blank sicolor" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投个票。
-        </h1></br>
-        <h1>谢谢 乖巧</h1>
-        </div>
-    </div>
-</div>
+
+       <!--
+       If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
+       Slide effect: slide, fade
+       Text Align: slide_style_center, slide_style_left, slide_style_right
+       Add Text Animation: https://daneden.github.io/animate.css/
+       -->
+
+
+       <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+           <!-- Indicators -->
+           <ol class="carousel-indicators">
+               <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+               <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+               <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+           </ol>
+
+           <!-- Wrapper For Slides -->
+           <div class="carousel-inner" role="listbox">
+
+               <!-- first Slide -->
+               <div class="item active">
+
+                   <!-- Slide Background -->
+                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   alt="Bootstrap Touch Slider"  class="slide-image"/>
+                   <div class="bs-slider-overlay"></div>
+                   <!-- Slide Text Layer -->
+                   <div class="slide-text slide_style_center">
+                       <h1 data-animation="animated flipInX">
+                        这里是一些说明，请向右翻页--></h1>
+                       </div>
+               </div>
+               <!-- End of Slide -->
+
+
+               <!-- Second Slide -->
+               <div class="item">
+
+                   <!-- Slide Background -->
+                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   alt="Bootstrap Touch Slider"  class="slide-image"/>
+                   <div class="bs-slider-overlay"></div>
+                   <!-- Slide Text Layer -->
+                   <div class="slide-text slide_style_center">
+                       <h1 data-animation="animated flipInX">
+                         总有一些美好，只有探索精神的人才能发现</h1>
+                        <h1>下一页应该有隐藏彩蛋。</h1>
+                       </div>
+               </div>
+               <!-- End of Slide -->
+
+               <!-- third Slide -->
+               <div class="item">
+
+                   <!-- Slide Background -->
+                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   alt="Bootstrap Touch Slider"  class="slide-image"/>
+                   <div class="bs-slider-overlay"></div>
+                   <!-- Slide Text Layer -->
+                   <div class="slide-text slide_style_center">
+                       <p data-animation="animated flipInX">
+                            据说我的网站，我想干什么，就干什么，我嘿嘿嘿。</p>
+                         <p>你那么看我干啥，你怕啥，隔着个电脑我还能干啥，只能拉个票了 </p>
+                         <p>都看到这了，已经用实际行动证明了你是真的喜欢我的网站，</p>
+                          <p>请再实际一点，动动小手，帮我的<a target="_blank sicolor" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投个票。
+                         </p>
+                         <p>谢谢 乖巧</p>
+                       </div>
+               </div>
+               <!-- End of Slide -->
+
+
+           </div><!-- End of Wrapper For Slides -->
+
+           <!-- Left Control -->
+           <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+               <span class="fa fa-angle-left" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+           </a>
+
+           <!-- Right Control -->
+           <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+               <span class="fa fa-angle-right" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+           </a>
+
+       </div> <!-- End  bootstrap-touch-slider Slider -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
