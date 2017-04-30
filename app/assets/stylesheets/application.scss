@@ -338,26 +338,34 @@ width: 100%;
 // 第四屏链接颜色
 
 .sicolor  {
-    color: #ffffff;//字体颜
-    margin-top: -30px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 300;
-    a:link {color: #FF0000;
-      font-size:300%;
-      font-weight:900;
-    }
-    a:visited {
-       color:#D52E28;
-       font-size:300%;
+  color: #ffffff;//字体颜
+  margin-top: -30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 300;
 
-     }
-     a:hover {
-       color: #FFEB3B;
-       font-size:300%;
-       font-weight:900;}
-       a:active {color: #0000FF}
+  a:link {color: #D52E28;
+    font-size:300%;
+    font-weight:900;
+  }
+
+  a:visited {
+    color:#071BC7;
+    font-size:300%;
+
+  }
+
+  a:hover {
+    color: #FFEB3B;
+    font-size:300%;
+    font-weight:900;
+  }
+
+  a:active {
+    color: #071BC7
+  }
 }
+
 // .sicolor :hover, sicolor:focus {
 //       color: #FFEB3B;
 //       text-decoration: underline;
