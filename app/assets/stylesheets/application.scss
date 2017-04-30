@@ -36,6 +36,7 @@
     line-height: 30px;
     // font-size: 40px;
      font-weight:700;
+     padding :10px 15px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -51,6 +52,7 @@
     line-height: 30px;
     font-size:100%;
     font-weight:900;
+       padding :10px 15px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -84,16 +86,36 @@
     left: 0;
     z-index: 1030;
 }
-// // footer悬浮
-// html {
-//    position: relative;
-//    min-height: 100%;
-//  }
+ // footer定位
+ html {
+    position: relative;
+    min-height: 100%;
+  }
 
  body {
    /* Margin bottom by footer height */
    margin-bottom: 100px;
  }
+
+ .footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   /* Set the fixed height of the footer here */
+   height: 100px;
+   background-color: #222222;
+   margin: 0 -15px;
+
+   p {
+      color: white;
+     margin-top: 30px;
+   }
+  }
+  // commonflash
+  .common_flash
+  {
+    margin-top:  23px; // 會將 flash 訊息往上移。
+  }
 
 //---------Box---------
 
@@ -101,9 +123,10 @@
     background-image: url("http://ww1.sinaimg.cn/large/006tNbRwgy1fex4qhya6dj31560q9qq7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top:-26px;
+    margin-top:-75px;
     padding-top: -20px;
     padding-bottom: 100px;
+    margin-bottom: 320px;
 
     .box-inner {
         background-color: rgba(250, 250, 250, 0.69);
@@ -154,6 +177,7 @@
 //---------Content---------
 
 .content-section-a {
+    margin-top: 50px;
     padding: 320px 0;
     background-color: #f8f8f8;
 }
@@ -235,27 +259,6 @@ text-align:center!important;
     height: auto;
 }
 
-  // // 轮播图 game
-  // .carousel {
-  //   width: 564px;
-  //   height:238px;
-  //   margin: 0 auto;
-  // }
-  // .carousel .item {
-  //   height: 375px;
-  //   margin: 0 auto;
-  // }
-  //
-  // // col居中
-  // .col-centered{
-  //   float:none;
-  //   margin:0 auto;
-  // }
-  //
-  // // 小游戏文字居中
-  // .game{
-  //   text-align:center
-  // }
 
 // 按钮属性
 // 颜色
@@ -333,23 +336,44 @@ width: 100%;
 }
 
 // 第四屏链接颜色
-.sicolor
-{
 
-  color: #D52E28  ;
+.sicolor  {
+    color: #ffffff;//字体颜
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    a:link {color: #FF0000;
+      font-size:300%;
+      font-weight:900;
+    }
+    a:visited {
+       color:#D52E28;
+       font-size:300%;
 
+     }
+     a:hover {
+       color: #FFEB3B;
+       font-size:300%;
+       font-weight:900;}
+       a:active {color: #0000FF}
 }
-a {
-    color: #D52E28;
-    text-decoration: none;
-    font-size:300%;
-    font-weight:900;
-}
-  a:hover, a:focus {
-      color: #FFEB3B;
-      text-decoration: underline;
-        font-size:300%;
-  }
+// .sicolor :hover, sicolor:focus {
+//       color: #FFEB3B;
+//       text-decoration: underline;
+//         font-size:300%;
+//   }
+  // a:link {color: #FF0000}
+// a:visited {
+//   color:#D52E28;
+//   font-size:300%;
+//   font-weight:900;
+// }
+// a:hover {
+//   color: #FFEB3B;
+//   font-size:300%;
+//   font-weight:900;}
+// a:active {color: #0000FF}
 
 // 滚屏
 

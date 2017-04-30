@@ -1,10 +1,11 @@
 class User < ApplicationRecord
+  has_many :jobs
   has_many :resumes
   has_many :comments
 
   has_many :votes
   has_many :voted_jobs, :through => :votes, :source => :job
-  
+
   has_many :favorites
   has_many :jobs, through: :favorites, source: :job
 

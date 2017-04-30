@@ -1,6 +1,7 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :require_is_admin
+  before_action :find_job_and_check_permission, only: [:edit, :update, :destroy]
   layout "admin"
   def show
     @job = Job.find(params[:id])
@@ -70,6 +71,14 @@ class Admin::JobsController < ApplicationController
 
 
   private
+  private
+  def find_job_and_check_permission
+    @job = Job.find(params[:id])
+
+    if current_user != @job.user
+      redirect_to root_path, alert: "You have no permission."
+    end
+  end
   def job_params
     params.require(:job).permit(:title,:description, :wage_upper_bound, :wage_lower_bound, :contact_email,:is_hidden,:image)
   end

@@ -1,6 +1,11 @@
-<body>
+<head>
+
+
   			<div class="col-md-12 col-centered">
 				  <div class="row box">
+            <div class="common_flash">
+              <%= render "common/flashes"%>
+            </div>
 				    <div class="box-inner col-md-6 col-md-offset-3">
 				      <h1 class="title">找bug</h1>
 				      <!-- 搜索 -->
@@ -27,7 +32,8 @@
 				    </div>
 				  </div>
 				</div>
-
+      </head>
+        <body>
 					<div class="content-section-a">
 					  <div class="container">
 					    <div class="row">
@@ -68,8 +74,8 @@
 								<div class="col-lg-5 col-sm-6">
 									<hr class="section-heading-spacer">
 									<div class="clearfix"></div>
-									<h2 class="section-heading">bug的宣言：</h2>
-									<p class="lead">“你走吧，我和 找bug 在一起了，如果不想再见到我，请给<a target="_blank" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投票。谢谢！"</p>
+									<h2 class="section-heading">不知道bug在哪，才需要找</h2>
+									<p class="lead">知道bug在哪儿，直接去改就行了。现在不用找了，直接把bug扔这里。</p>
 								</div>
 								<div class="col-lg-5 col-lg-offset-2 col-sm-6">
 									<%= image_tag "http://ww4.sinaimg.cn/large/006tNbRwgy1fex4d1sizqj30jg0ajaau.jpg",
@@ -86,8 +92,8 @@
           <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1fex941gc8aj30wu0us78x.jpg"
           class="dibusongmacimage">
         </div>
-
-
+      </br>
+    </br>
         <!-- Add this css File in head tag-->
        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
@@ -117,7 +123,7 @@
                <div class="item active">
 
                    <!-- Slide Background -->
-                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   <img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff4niqtcb0j309508bdfo.jpg"
                    alt="Bootstrap Touch Slider"  class="slide-image"/>
                    <div class="bs-slider-overlay"></div>
                    <!-- Slide Text Layer -->
@@ -133,13 +139,13 @@
                <div class="item">
 
                    <!-- Slide Background -->
-                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   <img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff4niqtcb0j309508bdfo.jpg"
                    alt="Bootstrap Touch Slider"  class="slide-image"/>
                    <div class="bs-slider-overlay"></div>
                    <!-- Slide Text Layer -->
                    <div class="slide-text slide_style_center">
                        <h1 data-animation="animated flipInX">
-                         总有一些美好，只有探索精神的人才能发现</h1>
+                         总有一些美好，只有探索精神的人才能发现</h1></br>
                         <h1>下一页应该有隐藏彩蛋。</h1>
                        </div>
                </div>
@@ -149,7 +155,7 @@
                <div class="item">
 
                    <!-- Slide Background -->
-                   <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4l99hwwdj31hc0u0wfc.jpg"
+                   <img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff4niqtcb0j309508bdfo.jpg"
                    alt="Bootstrap Touch Slider"  class="slide-image"/>
                    <div class="bs-slider-overlay"></div>
                    <!-- Slide Text Layer -->
@@ -158,8 +164,9 @@
                             据说我的网站，我想干什么，就干什么，我嘿嘿嘿。</p>
                          <p>你那么看我干啥，你怕啥，隔着个电脑我还能干啥，只能拉个票了 </p>
                          <p>都看到这了，已经用实际行动证明了你是真的喜欢我的网站，</p>
-                          <p>请再实际一点，动动小手，帮我的<a target="_blank sicolor" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投个票。
-                         </p>
+                          <div class="sicolor">
+                            请再实际一点，动动小手，帮我的<a target="_blank sisolor" href="https://fullstack.xinshengdaxue.com/works/296">找bug</a>投个票。
+                         </div>
                          <p>谢谢 乖巧</p>
                        </div>
                </div>
