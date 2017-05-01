@@ -28,5 +28,8 @@ class Job < ApplicationRecord
   validates :title,            presence: true
   validates :wage_upper_bound, presence: true
   validates :wage_lower_bound, presence: true
-  validates :wage_lower_bound, numericality: { greater_than: 0}
+  validates :wage_lower_bound, numericality: {greater_than: 0}
+  validates :wage_upper_bound, numericality: {greater_than_or_equal_to: :wage_lower_bound, message: "上限不高于下限，你玩呢！"}
+  # validates :wage_lower_bound, numericality: {less_than_or_equal_to: :wage_upper_bound, message: "薪水下限不能高于薪水上限"}
+
 end
