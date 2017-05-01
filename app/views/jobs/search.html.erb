@@ -2,23 +2,36 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-centered">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">
+
+
+
           <% if @query_string.blank? %>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
             <div class="search-info-title">
               <h3 class="searchcenter">bug为空，导致视觉模糊！</h3>
           <% elsif @jobs.blank? %>
-            <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
             <h3 class="search-info-title searchcenter">
-              这个bug没有过，今天算是长见识了。要不要试着
-              <%= link_to '发bug', new_job_path, class: 'btn btn-danger' %>    
+              这个bug没有过，今天算是长见识了。要不要试着</br></br>
+              <%= link_to '发bug', new_job_path, class: 'btn btn-danger' %>
+              <%= link_to '找外援', about_jobs_path, class: 'btn btn-danger' %>
             </h3>
 
 
 
             </h3>
           <% else %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
           <h2 class="search-info-title"> 有关"<%= @query_string %>"的信息 </h2>
         </h3>
       </div>

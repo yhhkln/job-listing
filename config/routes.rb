@@ -5,21 +5,24 @@ Rails.application.routes.draw do
     member do()
       post :upvote
       post :downvote
-
       post :add_to_favorite
       post :quit_favorite
-
     end
     collection do
       get :search
+      get 'about' => 'jobs#about'
     end
     resources :resumes
     resources :comments
   end
   root'welcome#index'
+
   namespace :admin do
+
     resources :jobs do
+
       member do
+
         post :publish
         post :hide
       end
