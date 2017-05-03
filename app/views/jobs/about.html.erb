@@ -14,9 +14,47 @@
 			</div>
 			<br>
 			<div class="daxiawaiwang">
-				<a target=" daxiawaiwang" href="https://fullstack-hq.slack.com/" class: "btn btn-success">去slack上玩耍</a>
-				<a target=" daxiawaiwang" href="http://stackoverflow.com/">stackoverflow</a>
+				<a target=" daxiawaiwang" href="https://fullstack-hq.slack.com/" class: "btn btn-success">去slack上找助教玩耍</a>
 			</div>
 		</div>
 	</div>
 </div>
+
+<br》
+
+<form name="formmain" id="formmain" onsubmit="search()" class="text-center">
+      <div class="form-input">
+        <input name="city" type="text" id="city" value="" placeholder="输入bug找bug" class="searchinput">
+      </div>
+
+      <div class="form-checkbox">
+        <label class="checkbox-inline">
+          <input name="radio" type="radio" id="logdown" value="" checked><a>去搜索logdown</a>
+        </label>
+        <label class="checkbox-inline">
+          <input name="radio" type="radio" id="stackoverflow" value=""><a>stackoverflow</a>
+        </label>
+
+      </div>
+      <div class="form-group">
+        <input type="button" name="Submit" value="我去也" onclick="search()" target="_blank" id="searchbutton" class="searchbutton">
+      </div>
+    </td>
+  </form>
+
+  <script>
+    function search() {
+      if (formmain.logdown.checked){
+ 	    var city;
+      var keyword;
+      keyword = encodeURI(":site logdown.com");
+ 	    city = encodeURI(formmain.city.value);
+ 	    window.open("http://www.google.com/search?hl=zh-CN&q=" + city + keyword);
+     }
+      if (formmain.stackoverflow.checked){
+        var city;
+   	    city = encodeURI(formmain.city.value);
+   	    window.open("http://stackoverflow.com/search?q="+ city);
+       }
+   }
+   </script>
