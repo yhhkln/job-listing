@@ -49,7 +49,7 @@
                 <th>点赞</th>
                 <th>收藏</th>
                 <th>我想改</th>
-                <th>已被领走<th>
+
               </tr>
             </thead>
             <tbody>
@@ -87,8 +87,6 @@
                     <% end %>
                   </td>
                   <td><%= link_to("该改改", edit_job_path(job), class: "btn btn-sm btn-default")%></td>
-                  <td><%= link_to("拜拜", job_path(job),    class: "btn btn-sm btn-default",
-                                method: :delete, data: { confirm: "Are you sure?" } )%>
                   </td>
                 </tr>
               <% end %>
